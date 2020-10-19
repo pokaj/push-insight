@@ -3,6 +3,7 @@ from .models import User
 from django.contrib.auth import authenticate
 from rest_framework.exceptions import AuthenticationFailed
 
+
 class UserSerializer(serializers.ModelSerializer):
     
     class Meta:
@@ -11,11 +12,11 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class RegisterSerializer(serializers.ModelSerializer):
-    password  = serializers.CharField(max_length=68, min_length=6, write_only=True)
+    password = serializers.CharField(max_length=68, min_length=6, write_only=True)
 
     class Meta:
         model = User
-        fields  = ['firstname', 'lastname', 'username', 'email', 'role', 'organization', 'password']
+        fields = ['firstname', 'lastname', 'username', 'email', 'role', 'organization', 'password']
     
     def validate(self, attrs):
         firstname = attrs.get('firstname', '')
