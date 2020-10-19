@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Introduction 
 Push insights is an application that presents information on key results to the relevant users in a timely manner. This information is presented to the user as dashboards/reports.
 
@@ -21,3 +22,6 @@ TODO: Guide users through getting your code up and running on their own system. 
 4.	Run Migrations - python manage.py makemigrations - python manage.py migrate
 5.  Run server - python manage.py runserver
 
+=======
+# push-insight
+>>>>>>> 8be9c475ea2993928468c02b539db4be0f1721c5
