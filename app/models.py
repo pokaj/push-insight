@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from rest_framework_simplejwt.tokens import RefreshToken
 
+
 class UserManager(BaseUserManager):
     def create_user(self, firstname, lastname, username, email, role, organization, password=None):
         if firstname is None:
@@ -18,12 +19,12 @@ class UserManager(BaseUserManager):
             raise TypeError("Users should have organization")
 
         user = self.model(
-            firstname = firstname,
-            lastname = lastname,
-            username =username,
-            email = self.normalize_email(email),
-            role = role,
-            organization = organization
+            firstname=firstname,
+            lastname=lastname,
+            username=username,
+            email=self.normalize_email(email),
+            role=role,
+            organization=organization
         )
         user.set_password(password)
         user.save()
