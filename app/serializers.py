@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class RegisterSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(max_length=68, min_length=6, write_only=True)
+    password = serializers.CharField((style = {'input_type': 'password'},max_length=68, min_length=6, write_only=True)
 
     class Meta:
         model = User
@@ -38,7 +38,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 class LoginSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(max_length=225, min_length=3)
     username = serializers.CharField(max_length=225, min_length=3, read_only=True)
-    password = serializers.CharField(max_length=225, min_length=3, write_only=True)
+    password = serializers.CharField((style = {'input_type': 'password'},max_length=225, min_length=3, write_only=True)
     tokens = serializers.CharField(max_length=68, min_length=3, read_only=True)
 
     class Meta:
