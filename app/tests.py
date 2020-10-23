@@ -1,19 +1,13 @@
-# from django.test import TestCase
-
-# from .serializers import RegisterSerializer, LoginSerializer
-# from django.contrib.auth.models import User
-# from django.urls import reverse, resolve
-# from rest_framework import status
-# from rest_framework.test import APITestCase
-# from django.test import TransactionTestCase, Client
-
 import json
+from django.test import TestCase
+
+from .serializers import RegisterSerializer, LoginSerializer
 from django.contrib.auth.models import User
-from django.urls import reverse
+from django.urls import reverse, resolve
 from rest_framework import status
 from rest_framework.test import APITestCase
-from .serializers import RegisterSerializer
 from django.test import TransactionTestCase, Client
+
 
 from django.contrib.auth import get_user_model
 
